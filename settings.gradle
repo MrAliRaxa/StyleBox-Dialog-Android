@@ -1,0 +1,3 @@
+include ':stylebox'
+include ':app'
+rootProject.name = "StyleBox Dialog"
