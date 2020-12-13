@@ -1,7 +1,10 @@
 package com.example.stylebox;
 
 import android.content.Context;
-import android.widget.Toast;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+
+import androidx.appcompat.app.AlertDialog;
 
 public class StyleBox {
 
@@ -11,7 +14,10 @@ public class StyleBox {
         this.context = context;
     }
 
-    public void ToastMe(String msg){
-        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
+    public void show(){
+        AlertDialog alertDialog=new AlertDialog.Builder(context).setView(R.layout.dialog_layout).create();
+        alertDialog.setTitle("Demo Lib");
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        alertDialog.show();
     }
 }
